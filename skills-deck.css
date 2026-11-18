@@ -1,0 +1,49 @@
+.skills-board{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);padding:44px 36px;gap:42px}
+.skill-deck{width:100%;min-width:0;display:flex;align-items:center;flex-direction:column}
+.skill-carousel{width:100%;max-width:350px;padding:0 20px}
+.skill-stage{width:100%;aspect-ratio:4/5;position:relative;perspective:1200px;isolation:isolate}
+.skill-stack-shadow{position:absolute;inset:7% 5% 6%;border-radius:25px;background:#a58abb url('assets/skill-card-back.svg') center / cover;border:1px solid #eee1f7;box-shadow:0 14px 24px #5e497333;z-index:-1;pointer-events:none}
+.skill-stack-shadow.shadow-left{transform:translate3d(-10px,7px,-18px) rotate(-12deg);opacity:.8}
+.skill-stack-shadow.shadow-right{transform:translate3d(10px,5px,-10px) rotate(10deg);opacity:.65;background-color:#c4add3}
+.skill-deck .skill-card{position:absolute;inset:0;width:100%;height:100%;display:block;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;transform:none;transition:none;touch-action:pan-y;-webkit-user-select:none;user-select:none}
+.skill-deck .skill-card:hover{transform:none;box-shadow:none}
+.skill-turn{display:block;position:absolute;inset:0;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.2,.72,.2,1)}
+.skill-deck .skill-card.flipped .skill-turn{transform:rotateY(180deg)}
+.skill-deck .skill-card.instant-turn .skill-turn{transition:none}
+.skill-side{position:absolute;inset:0;display:block;-webkit-backface-visibility:hidden;backface-visibility:hidden;pointer-events:none}
+.skill-cover{inset:4.5% 2.5% 3.8%;border-radius:10% / 8%;background:#8d71aa url('assets/skill-card-back.svg') center / 100% 100%;color:#faf2ff;box-shadow:0 10px 23px #6b53762b;overflow:hidden}
+.skill-content{transform:rotateY(180deg)}
+.skill-content img{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:normal;pointer-events:none}
+.skill-cover-label{position:absolute;top:17%;left:0;right:0;text-align:center;font-size:9px;letter-spacing:2px;color:#f5e8ffb8}
+.skill-monogram{position:absolute;inset:0;display:grid;place-items:center;font-family:Georgia,serif;font-size:clamp(33px,4vw,53px);font-weight:400;letter-spacing:4px;padding-left:4px;color:#fff8ff}
+.skill-cover-hint{position:absolute;bottom:18%;left:0;right:0;text-align:center;font-size:12px;letter-spacing:3px;color:#fff3ffdb}
+.skill-deck [aria-disabled="true"]{cursor:wait}
+.skill-deck .deck-hint{font-size:12px;line-height:1.8;color:#8c8393;margin:18px 0 0;text-align:center;min-height:22px}
+.skill-deck .draw-button{font-size:13px;margin-top:17px;min-height:44px;padding:11px 23px;gap:18px}
+.skill-deck .draw-button[aria-disabled="true"]{opacity:.7;transform:none;box-shadow:none}
+.skill-stage.is-shuffling .skill-card{animation:skill-shuffle-main .32s ease-in-out infinite}
+.skill-stage.is-shuffling .shadow-left{animation:skill-shuffle-left .32s ease-in-out infinite}
+.skill-stage.is-shuffling .shadow-right{animation:skill-shuffle-right .32s ease-in-out infinite}
+@keyframes skill-shuffle-main{0%,100%{transform:translateX(-14px) rotate(-3deg)}50%{transform:translateX(14px) rotate(3deg)}}
+@keyframes skill-shuffle-left{0%,100%{transform:translate3d(-25px,7px,-18px) rotate(-15deg)}50%{transform:translate3d(5px,7px,-18px) rotate(-4deg)}}
+@keyframes skill-shuffle-right{0%,100%{transform:translate3d(5px,5px,-10px) rotate(4deg)}50%{transform:translate3d(25px,5px,-10px) rotate(15deg)}}
+.work-card{position:relative;min-width:0;width:100%;padding:28px;background:linear-gradient(145deg,#fffdf6 5%,#f2f8ed 58%,#edf7f4);border:1px solid #fffef9;border-radius:24px;box-shadow:0 12px 35px #52695a0d;color:#344839}
+.work-eyebrow{display:flex;align-items:center;gap:8px;color:#7e9480;font-size:10px;line-height:1.6;letter-spacing:1.8px}
+.work-eyebrow>span:first-child{width:6px;height:6px;flex:none;border-radius:50%;background:#99b69c;box-shadow:0 0 0 4px #a9c1aa18}
+.work-note{position:absolute;top:-13px;right:27px;display:grid;place-items:center;width:108px;min-height:58px;padding:22px 12px 10px;border:1px solid #e4d8e9;border-radius:4px;background:linear-gradient(145deg,#fffdf9,#f5edf9);box-shadow:3px 7px 12px -5px #66537738;transform:rotate(6deg);color:#80698e;font-size:12px;font-weight:500;line-height:1.6;letter-spacing:2px}
+.work-pin{position:absolute;top:5px;left:calc(50% - 5px);width:10px;height:10px;border:1px solid #a58bb4;border-radius:50%;background:radial-gradient(circle at 32% 25%,#fff5ff 5%,#d7c0e2 28%,#ab8dbe 65%,#8f73a0);box-shadow:1px 2px 3px #74617b40}
+.work-pin:after{content:"";position:absolute;top:8px;left:5px;width:1px;height:5px;background:#8d8191;transform:rotate(24deg);transform-origin:top;box-shadow:1px 0 1px #76627a30}
+.work-card h3{font-size:clamp(25px,2.5vw,32px);font-weight:500;line-height:1.45;letter-spacing:.4px;margin:22px 0 14px;color:#304536}
+.work-card h3>span{display:block}
+.work-intro{font-size:15px;line-height:1.9;color:#6b7967}
+.work-habits{list-style:none;padding:0;margin:23px 0 0}
+.work-habits>li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:12px;padding:17px 0;border-top:1px solid #b9cbb74d}
+.work-index{font-family:Georgia,serif;font-size:13px;line-height:26px;color:#9b82ad}
+.work-habits h4{font-size:17px;line-height:1.5;font-weight:500;color:#405944;margin:0 0 6px}
+.work-habits p{font-size:14px;line-height:1.9;color:#6e7c69;margin:0}
+.work-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;padding-top:15px;border-top:1px solid #b9cbb74d}
+.work-tags>span{padding:5px 10px;border:1px solid #d7dfd2;border-radius:6px;color:#74826e;background:#fffdf78c;font-size:11px;line-height:1.5;letter-spacing:.6px}
+@media(max-width:900px){.skills-board{grid-template-columns:1fr;padding:38px 28px;gap:38px}.skills-board>.work-card{max-width:500px;margin:auto}.skill-monogram{font-size:50px}}
+@media(max-width:600px){.skills-board{padding:32px 16px;gap:32px}.skill-carousel{max-width:320px;padding:0 18px}.skill-cover-label{font-size:8px;letter-spacing:1px}.skill-cover-hint{font-size:11px;letter-spacing:2px}.skill-monogram{font-size:clamp(33px,10vw,46px)}.skill-deck .deck-hint{font-size:11px}.skill-stage.is-shuffling .skill-card{animation-name:skill-shuffle-small}.work-card{padding:24px 20px;border-radius:20px}.work-card h3{font-size:26px;margin-top:20px}.work-eyebrow{font-size:9px;letter-spacing:1.2px}.work-note{width:94px;min-height:51px;top:-12px;right:17px;font-size:11px;letter-spacing:1.5px;padding:19px 9px 8px}.work-intro{font-size:14px}.work-habits>li{gap:8px;grid-template-columns:20px minmax(0,1fr);padding:16px 0}.work-habits h4{font-size:16px}.work-habits p{font-size:14px}.work-tags{gap:6px}.work-tags>span{font-size:10px;padding:5px 8px}}
+@keyframes skill-shuffle-small{0%,100%{transform:translateX(-7px) rotate(-2deg)}50%{transform:translateX(7px) rotate(2deg)}}
+@media(prefers-reduced-motion:reduce){.skill-turn{transition:none}.skill-stage.is-shuffling .skill-card,.skill-stage.is-shuffling .skill-stack-shadow{animation:none}}
