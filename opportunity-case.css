@@ -1,3 +1,8 @@
+#iflytek-internship .work-points p strong {
+  color: var(--ink);
+  font-size: inherit;
+  font-weight: 700;
+}
 .opportunity-feature {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -6,26 +11,26 @@
   margin-top: 26px;
   padding: clamp(24px,4vw,46px);
   border-radius: 26px;
-  background: linear-gradient(140deg,#fffdf9e8,#f4f1fce8);
-  color: #303044;
+  background: linear-gradient(140deg,#fffdf5ed,#e8f2e9e8);
+  color: var(--ink);
 }
 .opportunity-feature h3 { margin: 12px 0 15px; font-size: clamp(25px,3vw,38px); line-height: 1.35; }
-.opportunity-main > p:not(.myday-overline):not(.myday-demo-note),
+.opportunity-main > p:not(.myday-overline),
 .opportunity-example p,
-.opportunity-details dd { color: #515269; font-size: 16px; line-height: 1.8; }
-.opportunity-feature .myday-overline { color: #695c95; font-size: 13px; }
-.opportunity-example { margin: 22px 0 0; padding: 15px 17px; border-left: 3px solid #8b72bd; background: #eae3f691; border-radius: 0 12px 12px 0; }
-.opportunity-example span { display: block; margin-bottom: 5px; color: #65528c; font-size: 13px; }
+.opportunity-details dd { color: #515c4e; font-size: 16px; line-height: 1.8; }
+.opportunity-main strong, .opportunity-details dd strong { color: #344b3c; }
+.opportunity-feature .myday-overline { color: #596b56; font-size: 13px; }
+.opportunity-example { margin: 22px 0 0; padding: 15px 17px; border-left: 3px solid #b59a56; background: #f3edd9dc; border-radius: 0 12px 12px 0; }
+.opportunity-example span { display: block; margin-bottom: 5px; color: #756238; font-size: 13px; }
 .opportunity-example p { margin: 0; }
-.opportunity-feature .myday-demo-note { color: #55566d; font-size: 13px; }
-.opportunity-details { min-width: 0; padding: clamp(18px,3vw,28px); border: 1px solid #e8e1f1; border-radius: 18px; background: #fffdfbd9; }
+.opportunity-details { min-width: 0; padding: clamp(18px,3vw,28px); border: 1px solid #dce7d8; border-radius: 18px; background: #fffef8d9; }
 .opportunity-details dl { display: grid; gap: 15px; margin: 0; }
-.opportunity-details dt { margin-bottom: 3px; font-size: 15px; font-weight: 700; color: #65528c; }
+.opportunity-details dt { margin-bottom: 3px; font-size: 15px; font-weight: 700; color: #405c48; }
 .opportunity-details dd { margin: 0; }
-.opportunity-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 19px; padding-top: 16px; border-top: 1px solid #e9e2f2; }
+.opportunity-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 19px; padding-top: 16px; border-top: 1px solid #dce7d8; }
 .opportunity-metrics strong, .opportunity-metrics span { display: block; }
-.opportunity-metrics strong { font-size: clamp(24px,3vw,32px); color: #625193; }
-.opportunity-metrics span { font-size: 14px; color: #55566d; }
+.opportunity-metrics strong { font-size: clamp(24px,3vw,32px); color: #405c48; }
+.opportunity-metrics span { font-size: 14px; color: #515c4e; }
 @media (max-width: 750px) {
   .opportunity-feature { grid-template-columns: 1fr; gap: 23px; }
   .opportunity-feature .myday-links { flex-wrap: wrap; }
