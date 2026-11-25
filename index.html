@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="skills-deck.css">
   <script src="app.js" defer></script>
   <script src="skills-deck.js" defer></script>
+  <link rel="stylesheet" href="opportunity-case.css">
 </head>
 <body>
   <a class="skip-link" href="#about">跳转至主要内容</a>
@@ -68,7 +69,7 @@
       </div>
     </section>
     <section id="projects" class="section-shell projects">
-      <div class="section-heading"><p class="eyebrow">PRODUCT PRACTICE</p><h2><span class="section-number">04</span><span class="section-title">把想法做成可体验的产品</span></h2><p>从记录中的切换、填表与打卡压力出发，让小想法长成可体验的产品。</p></div>
+      <div class="section-heading"><p class="eyebrow">PRODUCT PRACTICE</p><h2><span class="section-number">04</span><span class="section-title">把想法做成可体验的产品</span></h2><p>从日常记录到销售取数，找到费时间的步骤，再用可体验的原型验证方案。</p></div>
       <article class="myday-feature">
         <figure class="myday-preview device-preview home-device-preview"><div class="product-device"><div class="product-device-screen"><img src="assets/myday-home.webp" alt="手机中的 MY DAY 首页，含一句话记录及网球、健身、游泳事件" width="780" height="1580" loading="lazy"></div></div></figure>
         <div class="myday-feature-copy">
@@ -85,6 +86,33 @@
         </div>
       </article>
       <div class="myday-case-strip"><span>生活里的小想法，也可以长成一个产品！</span><a href="my-day.html">看看设计与复盘 ↗</a></div>
+      <article class="opportunity-feature glass" aria-labelledby="opportunity-title">
+        <div class="opportunity-main">
+          <p class="myday-overline">B 端数据工具 / 独立项目负责人</p>
+          <h3 id="opportunity-title">基于 NL2SQL 的商机智能查询助手</h3>
+          <p>销售团队做商机跟进或周会复盘时，常要在 CRM 里反复筛团队、年份和项目阶段，再手动整理 Excel。我把这些步骤做成一句话查询，让业务人员可以当场核对条件并拿到清单。</p>
+          <div class="opportunity-example">
+            <span>试试这样问</span>
+            <p>查预计 2026 年成交的民办校在途商机，导出 Excel。</p>
+          </div>
+          <div class="myday-links">
+            <a class="button dark" href="https://hongleiwang04.github.io/ai-opportunity-assistant/" target="_blank" rel="noopener noreferrer">体验商机助手</a>
+            <a class="button light" href="https://github.com/HongleiWang04/ai-opportunity-assistant" target="_blank" rel="noopener noreferrer">查看 GitHub 源码</a>
+          </div>
+          <p class="myday-demo-note">公开演示采用规则解析与浏览器内 SQLite，使用模拟数据，无需登录。</p>
+        </div>
+        <div class="opportunity-details">
+          <dl>
+            <div><dt>产品定义</dt><dd>面向销售运营与业务负责人，优先解决商机进展和金额查询。结果页展示实际筛选条件，便于团队统一口径。</dd></div>
+            <div><dt>AI 交互设计</dt><dd>千问版将问题解析为结构化条件，通过参数化 SQL 查库。条件不清时追问，后续补充继承已确认的筛选范围。</dd></div>
+            <div><dt>原型验收</dt><dd>以 SQL 结果作为验收标准，验证筛选、追问、统计、字段调整及 Excel 导出。</dd></div>
+          </dl>
+          <div class="opportunity-metrics">
+            <div><strong>5,600</strong><span>条模拟商机</span></div>
+            <div><strong>30</strong><span>组业务验收用例</span></div>
+          </div>
+        </div>
+      </article>
     </section>
 
     <section id="skills" class="section-shell skills">
