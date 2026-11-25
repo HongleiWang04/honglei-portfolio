@@ -90,7 +90,7 @@
         <div class="opportunity-main">
           <p class="myday-overline">B 端数据工具 / 独立项目负责人</p>
           <h3 id="opportunity-title">基于 NL2SQL 的商机智能查询助手</h3>
-          <p>在科大讯飞实习时，我发现，临时想确认一个项目的进展，也要在 CRM 里逐步筛选、逐项找字段。业务人员知道自己想查什么，耗时的是把问题拆成系统里的筛选项。我为此设计了一个<strong>自然语言查数助手</strong>，让业务人员用一句话发起查询，方便日常沟通和重点项目跟进。</p>
+          <p>在科大讯飞实习期间，我观察到业务人员常需临时核查项目进展和回款情况。核查时要在 CRM 中分步筛选、查找字段。即使查询目标明确，<strong>将业务诉求拆解为系统筛选条件</strong>仍会增加取数成本。基于这一痛点，我设计了<strong>自然语言查数助手</strong>，支持用一句话发起查询，减少日常沟通和重点项目跟进中的取数步骤。</p>
           <div class="opportunity-example">
             <span>试试这样问</span>
             <p>查预计 2026 年成交的民办校在途商机，导出 Excel。</p>
@@ -102,9 +102,9 @@
         </div>
         <div class="opportunity-details">
           <dl>
-            <div><dt>产品定义</dt><dd>从「项目进展到哪了」和「这批商机金额是多少」两类日常需求切入。<strong>首版聚焦商机进展和关键经营信息</strong>，让用户先核对查询口径，再查看清单或导出 Excel。</dd></div>
-            <div><dt>方案设计</dt><dd>用千问把问题转为筛选条件，再通过参数化 SQL 查库。<strong>口径不清就追问，已确认的条件在多轮查询中保留</strong>，减少误查和重复输入。</dd></div>
-            <div><dt>数据验证</dt><dd>用独立 SQL 查询核对筛选结果和条件继承，并检查<strong>页面与 Excel 的记录数、金额合计</strong>是否一致。</dd></div>
+            <div><dt>产品定义</dt><dd>从「项目进展到哪了」「该项目回款多少」两类临时取数需求切入，MVP 先支持商机进展和项目金额查询。设计<strong>先核对口径，再查看明细或导出 Excel</strong>的流程，让清单的统计范围可核对。</dd></div>
+            <div><dt>方案设计</dt><dd>由千问大模型将自然语言问句解析为筛选条件，后端构建参数化 SQL 执行查询。<strong>业务口径有歧义时主动追问，多轮对话继承已确认的筛选条件</strong>，降低理解偏差，减少重复输入。</dd></div>
+            <div><dt>数据验证</dt><dd>以独立 SQL 查询结果为基准，校验筛选逻辑和条件继承。核对<strong>页面展示与 Excel 导出的记录条数、金额汇总</strong>，验证数据一致性。</dd></div>
           </dl>
           <div class="opportunity-metrics">
             <div><strong>5,600</strong><span>条模拟商机</span></div>
